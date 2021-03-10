@@ -28,9 +28,20 @@ public class MemberService {
 
     /**
      * @param member
+     * @param userId
      * @return
      */
-    public int updateByMember(Member member) {
+    public int add(Member member, Integer userId) {
+        Integer settingId = settingMapper.queryIdByUserId(userId);
+        member.setSettingId(settingId);
+        return memberMapper.insertSelective(member);
+    }
+
+    /**
+     * @param member
+     * @return
+     */
+    public int update(Member member) {
 
         return memberMapper.updateByPrimaryKeySelective(member);
     }
@@ -39,8 +50,9 @@ public class MemberService {
      * @param id
      * @return
      */
-    public int deleteById(Integer id) {
+    public int delete(Integer id) {
 
         return memberMapper.deleteByPrimaryKey(id);
     }
+
 }

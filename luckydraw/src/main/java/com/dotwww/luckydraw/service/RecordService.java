@@ -19,9 +19,14 @@ public class RecordService {
      * @param awardId
      * @return
      */
-    public int addRecord(List<Integer> memberIds, Integer awardId) {
+    public int add(List<Integer> memberIds, Integer awardId) {
 
         return recordMapper.batchInsert(memberIds, awardId);
+    }
+
+    public int deleteByMemberId(Integer id) {
+
+        return recordMapper.deleteByMemberId(id);
     }
 
     /**

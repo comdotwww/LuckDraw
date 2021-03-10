@@ -12,7 +12,7 @@ public class SettingService {
 
     /**
      * @param id
-     * @return
+     * @return Setting
      */
     public Setting queryByUserId(Integer id) {
 
@@ -22,7 +22,7 @@ public class SettingService {
     /**
      * @param batchNumber
      * @param userId
-     * @return
+     * @return int
      */
     public int update(Integer batchNumber, Integer userId) {
 
