@@ -22,7 +22,7 @@ public class UserController {
      * @param headFile
      * @return
      */
-    @PostMapping(path = "register")
+    @PostMapping(path = "/register")
     public Object register(@Validated User user, MultipartFile headFile) {
         // 校验请求数据
         // @Validated

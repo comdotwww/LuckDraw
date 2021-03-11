@@ -25,5 +25,5 @@ public class Record {
     /**
      * 创建时间
      */
-    private Date creatDate;
+    private Date createTime;
 }

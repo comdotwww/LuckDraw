@@ -27,7 +27,7 @@ public class Setting {
     /**
      * 创建时间
      */
-    private Date createdTime;
+    private Date createTime;
 
     /**
      * 创建人

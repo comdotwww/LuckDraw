@@ -28,15 +28,14 @@ public class User implements Serializable {
      * 用户账号
      */
     @NotBlank(message = "用户账号不能为空")
-    @Length(min = 5, max = 10, message = "用户账号最短5位，最长为10位")
+    @Length(min = 3, max = 20, message = "用户账号最短3位，最长为20位")
     private String username;
 
     /**
      * 密码
      */
     @NotEmpty(message = "密码不能为空")
-    @Length(min = 6, max = 12, message = "密码长度为6-21位。")
-    @Pattern(regexp = "[A-Za-z0-9]*", message = "密码不合法，仅允许字母和数字")
+    @Length(min = 3, max = 20, message = "密码长度为3-20位。")
     private String password;
 
     /**
@@ -69,6 +68,7 @@ public class User implements Serializable {
     /**
      * 创建时间
      */
+    @NotBlank(message = "创建时间不能为空")
     private Date createTime;
 
     /**
